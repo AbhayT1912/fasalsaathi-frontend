@@ -93,7 +93,6 @@ export default function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/support" element={<SupportPage />} />
-        <Route path="/breed-analysis" element={<BreedAnalysisPage />} />
 
         {/* Authenticated app — lives at /app */}
         <Route path="/app" element={<AuthenticatedApp />} />
@@ -334,7 +333,6 @@ function AppContent({
             isChatOpen={isChatOpen}
             setIsChatOpen={setIsChatOpen}
           />
-          {isDashboard && <WeatherHeader />}
         </>
       )}
 
@@ -541,7 +539,6 @@ function TopNavigationWithRouter({
               <DropdownMenuItem className="fs-drop-item" onClick={() => onNavigate("profile")}>
                   <User className="w-4 h-4 mr-2 opacity-80" /> {t("profile")}
                 </DropdownMenuItem>
-              <DropdownMenuItem>{t("settings")}</DropdownMenuItem>
               <DropdownMenuItem onClick={onLogout}>
                 {t("logout")}
               </DropdownMenuItem>

@@ -13,6 +13,7 @@ interface ApiError {
     status_code?: number;
 }
 
+
 const API_BASE_URL = (() => {
     const envUrl = import.meta.env.VITE_API_BASE_URL?.trim();
     if (envUrl && envUrl !== '') {

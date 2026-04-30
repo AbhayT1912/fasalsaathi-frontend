@@ -29,7 +29,6 @@ export function PublicNavbar() {
     { label: t.pricing, href: "/pricing" },
     { label: t.guidelines, href: "/guidelines" },
     { label: t.support, href: "/support" },
-    { label: t.breedAnalysis, href: "/breed-analysis" },
     { label: t.contact, href: "/contact" },
   ];
 
@@ -58,9 +57,12 @@ export function PublicNavbar() {
         .fs-nav-wrapper { --nav-font: 'Poppins', system-ui, sans-serif; --nav-primary: #16a34a; --nav-primary-dark: #15803d; }
         .fs-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: all 0.3s ease; font-family: var(--nav-font); --hd-text: rgba(255, 255, 255, 0.85); --hd-text-hover: #ffffff; --hd-logo-bg: rgba(255, 255, 255, 0.15); --hd-logo-text: #ffffff; --hd-indicator: #ffffff; --hd-btn-out-border: rgba(255, 255, 255, 0.3); --hd-btn-out-text: #ffffff; --hd-btn-out-hover-bg: rgba(255, 255, 255, 0.1); --hd-btn-solid-bg: #ffffff; --hd-btn-solid-text: #064e3b; --hd-btn-solid-hover: #f1f5f9; --hd-hamburger: #ffffff; }
         .fs-header.scrolled { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); --hd-text: #4b5563; --hd-text-hover: var(--nav-primary); --hd-logo-bg: var(--nav-primary); --hd-logo-text: var(--nav-primary); --hd-indicator: var(--nav-primary); --hd-btn-out-border: #e2e8f0; --hd-btn-out-text: var(--nav-primary); --hd-btn-out-hover-bg: #f0fdf4; --hd-btn-solid-bg: var(--nav-primary); --hd-btn-solid-text: #ffffff; --hd-btn-solid-hover: var(--nav-primary-dark); --hd-hamburger: #4b5563; }
-        .fs-container { max-width: 80rem; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; height: 5rem; }
+        
+        /* UPDATED: Changed width to 100% and removed max-width/margin limits */
+        .fs-container { width: 100%; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; height: 5rem; box-sizing: border-box; }
         @media (min-width: 640px) { .fs-container { padding: 0 1.5rem; } }
         @media (min-width: 1024px) { .fs-container { padding: 0 2rem; } }
+        
         .fs-logo { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; outline: none; }
         .fs-logo-icon { width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background-color: var(--hd-logo-bg); transition: background-color 0.3s ease; display: flex; align-items: center; justify-content: center; }
         .fs-logo-text { font-size: 1.5rem; font-weight: 700; color: var(--hd-logo-text); transition: color 0.3s ease; letter-spacing: -0.025em; }

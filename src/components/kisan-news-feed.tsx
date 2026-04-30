@@ -194,7 +194,7 @@ export function KisanNewsFeed() {
     >
       <div className="fs-db-card !border-0 !shadow-none !bg-transparent overflow-visible">
         <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="relative">
+          <div className="relative p-6">
             <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-12 bg-[#03402d] rounded-full hidden md:block" />
             <h2 className="text-3xl font-extrabold text-[#011e14] font-['Poppins'] flex items-center gap-3 tracking-tight">
               <span className="p-2.5 rounded-2xl bg-[#03402d]/5 text-[#03402d]">
@@ -211,7 +211,7 @@ export function KisanNewsFeed() {
             type="button"
             onClick={() => loadNews(true)}
             disabled={isRefreshing || isLoading}
-            className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm text-slate-700 font-bold text-sm hover:border-[#03402d] hover:text-[#03402d] hover:shadow-md active:scale-95 disabled:opacity-50 disabled:pointer-events-none transition-all duration-300"
+            className="flex items-center gap-2 px-5 mr-3 mt-3 p-4 rounded-xl bg-white border border-slate-200 shadow-sm text-slate-700 font-bold text-sm hover:border-[#03402d] hover:text-[#03402d] hover:shadow-md active:scale-95 disabled:opacity-50 disabled:pointer-events-none transition-all duration-300"
           >
             <RefreshCw size={18} className={`${isRefreshing ? 'animate-spin' : ''}`} />
             {isRefreshing ? 'Refreshing...' : 'Update Feed'}
@@ -247,7 +247,7 @@ export function KisanNewsFeed() {
                 <p className="text-red-700/70 font-medium max-w-sm">{error}</p>
                 <button 
                   onClick={() => loadNews()} 
-                  className="mt-6 px-6 py-2.5 rounded-xl bg-red-600 text-white font-bold text-sm shadow-lg shadow-red-600/20 hover:bg-red-700 transition-colors"
+                  className="mt-6 px-6 py-3 rounded-xl bg-red-600 text-white font-bold text-sm shadow-lg shadow-red-600/20 hover:bg-red-700 transition-colors"
                 >
                   Try Again
                 </button>

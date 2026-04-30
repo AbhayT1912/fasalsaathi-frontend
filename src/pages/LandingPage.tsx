@@ -510,7 +510,7 @@ export function LandingPage() {
                 <div className="fs-lp-image-wrapper">
                   <div className="fs-lp-image-glow" />
                   <motion.img 
-                    src="/tractor.png" 
+                    src="/harvester.png" 
                     alt="Traditional Bullock Cart"
                     initial={{ opacity: 0, scale: 0.5, rotate: -20, y: 50 }} 
                     animate={{ opacity: 1, scale: 1, rotate: 0, y: 0 }} 
